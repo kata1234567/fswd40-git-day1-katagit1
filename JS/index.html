@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+<p id="placeholder"></p>
+
+
+<script>
+
+var a = 5;  //global scope
+b = 3;  // global scope
+
+function product () {
+	var a = 10; //local variable local scope is stronger then a global one
+	return a * b;
+}
+
+console.log(product());
+
+
+function sum(x,y){
+	return x + y;
+}
+
+console.log(sum(15,25));
+// document.write(sum(133,25));
+
+
+document.getElementById("placeholder").innerHTML = sum(5,15);
+
+(function(){
+	document.write("Hello Everyone");
+}());
+
+
+try{
+
+
+	alert("Welchome Students");
+} catch(e) {
+	console.log(e.message);
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>
